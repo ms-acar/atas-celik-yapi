@@ -224,12 +224,15 @@
     const ev = getQueryParam('ev');
     // Breadcrumb'da sadece ürün adı göster
     const evTitle = document.getElementById('ev-title');
+    let evName = ev || '';
     if (ev && ev.startsWith('images/prefabrik/')) {
-      const parts = ev.split('/');
-      evTitle.textContent = parts[parts.length - 1];
-    } else {
-      evTitle.textContent = ev || '';
+      const lastSlash = ev.lastIndexOf('/');
+      const lastDot = ev.lastIndexOf('.');
+      if (lastSlash !== -1 && lastDot !== -1 && lastDot > lastSlash) {
+        evName = decodeURIComponent(ev.substring(lastSlash + 1, lastDot));
+      }
     }
+    evTitle.textContent = evName;
     // Breadcrumb'da ikinci seviye dinamik olarak değişsin
     const breadcrumbSecond = document.getElementById('breadcrumb-second');
     if (ev && ev.startsWith('images/prefabrik/')) {
