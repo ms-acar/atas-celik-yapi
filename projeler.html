@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeler | ATAŞ Çelik Yapı</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Açıklama: Arama motorları ve sosyal medya için özet bilgi -->
+    <meta name="description" content="ATAŞ Çelik Yapı; Tekirdağ ve çevresinde hafif çelik, prefabrik ve konteyner yapı çözümleri sunar. Güvenilir ve ekonomik yapılar için bizimle iletişime geçin.">
+
+    <!-- Anahtar kelimeler: (isteğe bağlı, artık SEO için az önemlidir) -->
+    <meta name="keywords" content="hafif çelik yapı, prefabrik ev, konteyner yapı, Tekirdağ çelik yapı, ATAŞ Çelik">
+
+    <!-- Yazar bilgisi -->
+    <meta name="author" content="ATAŞ Çelik Yapı">
+
+    <!-- Sosyal medya için Open Graph (Facebook, LinkedIn vb.) -->
+    <meta property="og:title" content="ATAŞ Çelik Yapı | Hafif Çelik, Prefabrik ve Konteyner Yapılar">
+    <meta property="og:description" content="Tekirdağ'da hafif çelik, prefabrik ve konteyner yapı hizmetlerinde uzman firmayız. Dayanıklı ve modern çözümler sunuyoruz.">
+    <meta property="og:image" content="https://www.orneksite.com/images/kapak.jpg"> <!-- Gerçek bir görsel URL ile değiştir -->
+    <meta property="og:url" content="https://www.orneksite.com"> <!-- Gerçek site URL ile değiştir -->
+    <meta property="og:type" content="website">
+
+    <!-- Twitter için kart ayarları -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ATAŞ Çelik Yapı">
+    <meta name="twitter:description" content="Prefabrik, hafif çelik ve konteyner yapı çözümleri için ATAŞ Çelik Yapı’ya güvenin.">
+    <meta name="twitter:image" content="https://www.orneksite.com/images/kapak.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/icon.png" type="image/x-icon">
+
+    <!-- CSS ve stil dosyaları -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+</head>
+<body class="bg-gray-50">
+  <div class="header-top fixed-top">  
+    <!-- style="background: #323393;" -->
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center py-1 text-light">
+        <div class="header-info-text hidden md:block" style="font-size: 0.8rem;">
+          Tüm talep ve istekleriniz için satış ofisimizden veya telefon numaramızdan bizlere ulaşabilirsiniz.
+        </div>
+        <div class="header-right d-flex align-items-center gap-4" style="font-size: 0.8rem;">
+          <span class="d-flex align-items-center gap-1 item1">
+            <i class="fa-solid fa-phone"></i> 0282 231 24 24
+          </span>
+          <span class="d-flex align-items-center gap-1 item2">
+            <i class="fa-solid fa-clock"></i> 09:00–17:00
+          </span>
+          <span class="d-flex align-items-center gap-1 header-social hidden md:flex">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+      <!-- Overlay for mobile menu -->
+      <div id="mobile-menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div>
+
+      <nav class="fixed top-10 left-0 w-full bg-transparent z-50 transition-all duration-300 ease-in-out" id="navbar">
+        <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
+            <a href="index.html" class="flex items-center">
+                 <img src="images/logo.png" alt="logo" class="logo">
+            </a>
+            <div class="flex items-center lg:order-2">
+                <div class="hidden mt-2 mr-4 sm:inline-block">
+                    <span></span>
+                </div>
+    
+                <a href="tel:02822312424"
+                class="relative overflow-hidden text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-xl text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 ripple-effect-button">
+                <span class="relative z-10 text-white">Arayın</span>
+              </a>
+                <button data-collapse-toggle="mobile-menu-2" type="button"
+                    class="inline-flex items-center p-2 ml-1 text-sm text-gray-400 rounded-lg lg:hidden hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600"
+                    aria-controls="mobile-menu-2" aria-expanded="false">
+                    <span class="sr-only">Menüyü Aç</span>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Desktop menu -->
+            <div class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1" id="desktop-menu">
+                <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0 items-center">
+                    <!-- <li class="py-2 lg:py-0"><a href="index.html" class="block py-2 pl-3 pr-4 text-white bg-red-700 rounded lg:bg-transparent lg:text-red-500 lg:p-0 dark:text-white text-center" aria-current="page">Anasayfa</a></li> -->
+                    <li class="py-2 lg:py-0"><a href="kurumsal.html" class="block py-2 pl-3 pr-4 text-white border-b border-gray-700 hover:bg-gray-700 lg:hover:bg-transparent lg:border-0 lg:hover:text-red-500 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700 text-center">Kurumsal</a></li>
+                    <li class="py-2 lg:py-0"><a href="celikev.html" class="block py-2 pl-3 pr-4 text-white border-b border-gray-700 hover:bg-gray-700 lg:hover:bg-transparent lg:border-0 lg:hover:text-red-500 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700 text-center">Çelik Ev</a></li>
+                    <li class="py-2 lg:py-0"><a href="prefabrik.html" class="block py-2 pl-3 pr-4 text-white border-b border-gray-700 hover:bg-gray-700 lg:hover:bg-transparent lg:border-0 lg:hover:text-red-500 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700 text-center">Prefabrik Ev</a></li>
+                    <li class="py-2 lg:py-0"><a href="konteyner.html" class="block py-2 pl-3 pr-4 text-white border-b border-gray-700 hover:bg-gray-700 lg:hover:bg-transparent lg:border-0 lg:hover:text-red-500 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700 text-center">Konteyner</a></li>
+                    <li class="py-2 lg:py-0"><a href="projeler.html" class="block py-2 pl-3 pr-4 text-white border-b border-gray-700 hover:bg-gray-700 lg:hover:bg-transparent lg:border-0 lg:hover:text-red-500 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700 text-center">Projeler</a></li>
+                    <li class="py-2 lg:py-0"><a href="iletisim.html" class="block py-2 pl-3 pr-4 text-white border-b border-gray-700 hover:bg-gray-700 lg:hover:bg-transparent lg:border-0 lg:hover:text-red-500 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700 text-center">İletişim</a></li>
+                </ul>
+            </div>
+            <!-- Mobile menu (hidden by default) -->
+            <div id="mobile-menu-2" class="fixed top-0 right-0 h-full w-3/4 max-w-xs bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden hidden pt-8">
+              <button id="mobile-menu-close" class="absolute top-12 right-4 text-2xl text-gray-700 hover:text-black focus:outline-none">&times;</button>
+              <ul class="flex flex-col font-medium mt-16 space-y-4 px-6">
+                  <!-- <li><a href="index.html" class="block py-3 px-4 text-black text-lg text-center">Anasayfa</a></li> -->
+                  <li><a href="index.html" class="block py-3 px-4 text-black text-lg text-center">Anasayfa</a></li>
+                  <li><a href="kurumsal.html" class="block py-3 px-4 text-black text-lg text-center">Kurumsal</a></li>
+                  <li><a href="celikev.html" class="block py-3 px-4 text-black text-lg text-center">Çelik Ev</a></li>
+                  <li><a href="prefabrik.html" class="block py-3 px-4 text-black text-lg text-center">Prefabrik Ev</a></li>
+                  <li><a href="konteyner.html" class="block py-3 px-4 text-black text-lg text-center">Konteyner</a></li>
+                  <li><a href="projeler.html" class="block py-3 px-4 text-black text-lg text-center">Projeler</a></li>
+                  <li><a href="iletisim.html" class="block py-3 px-4 text-black text-lg text-center">İletişim</a></li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+  
+  <div class="catalog-banner">
+    <img src="images/kurumsalbg.jpg" alt="Galeri Arkaplan">
+</div>
+
+<div class="relative bg-black">
+  <div class="flex justify-center">
+    <h1 class="text-center text-3xl font-bold text-white sm:text-4xl sm:leading-none m-6">
+      Projeler
+    </h1>
+  </div>
+    <div class="absolute inset-x-0 bottom-0">
+      <svg viewBox="0 0 224 12" fill="currentColor" class="-mb-1 w-full text-white" preserveAspectRatio="none">
+        <path d="M0,0 C48.8902582,6.27314026 86.2235915,9.40971039 112,9.40971039 C137.776408,9.40971039 175.109742,6.27314026 224,0 L224,12.0441132 L0,12.0441132 L0,0 Z"></path>
+      </svg>
+    </div>
+    <div class="mx-auto px-4 py-4 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8 lg:py-8">
+      <div class="relative max-w-2xl sm:mx-auto sm:max-w-xl sm:text-center md:max-w-2xl">
+        <p class="mb-8 text-center text-base text-gray-200 md:text-lg">Projeler sayfamızda, çelik, prefabrik ve konteyner yapılar alanında tamamladığımız çeşitli başarılı işleri keşfedin. Her biri modern mühendislik ve estetiği bir araya getiren anahtar teslim çözümlerimizi yakından inceleyin.</p>
+        <p class="mb-10 max-w-md text-xs tracking-wide text-indigo-100 sm:mx-auto sm:text-sm md:mb-8"></p>
+      </div>
+    </div>
+  </div>
+
+<div class="max-w-6xl mx-auto px-2 md:px-6 py-8">
+  <nav class="text-sm mb-6 flex items-center gap-2">
+    <a href="index.html" class="font-semibold text-gray-700 hover:text-[var(--primary-blue)]">Anasayfa</a>
+    <span class="text-gray-400">&gt;</span>
+    <span class="font-semibold text-gray-700">Projeler</span>
+  </nav>
+
+  <!-- Tekirdağ Gökkuşağı Evleri Projesi -->
+  <div class="flex flex-col md:flex-row gap-8 items-center mb-12 bg-white rounded-xl shadow p-4 relative">
+    <div class="w-full md:w-1/2 relative">
+      <!-- Ribbon -->
+      <div class="absolute left-0 top-0 h-16 w-16 z-10">
+        <div class="absolute transform -rotate-45 bg-red-600 text-center text-white font-semibold py-1 left-[-35px] top-[32px] w-[170px] shadow-lg" style="font-size:1rem;letter-spacing:1px;">
+          TAMAMLANDI
+        </div>
+      </div>
+      <div class="flex gap-2 overflow-x-auto">
+        <img src="images/proje/proje.html/Tekirdağ Gökkuşağı Evleri Projesi/1.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Tekirdağ Gökkuşağı Evleri Projesi/2.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Tekirdağ Gökkuşağı Evleri Projesi/3.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Tekirdağ Gökkuşağı Evleri Projesi/4.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+      </div>
+    </div>
+    <div class="w-full md:w-1/2">
+      <h2 class="text-2xl font-bold mb-4 text-[var(--primary-blue)]">Tekirdağ Gökkuşağı Evleri Projesi</h2>
+      <p class="text-gray-700 text-base">
+        Farklı mimari çizgileriyle dikkat çeken Gökkuşağı Evleri, Tekirdağ’da toplu konut anlayışına yeni bir soluk getiriyor. Enerji verimliliği ve estetik görünüm ön planda tutulmuştur.
+      </p>
+    </div>
+  </div>
+
+  <!-- Uçmakdere Çift Katlı Çelik Ev Projesi -->
+  <div class="flex flex-col md:flex-row gap-8 items-center mb-12 bg-white rounded-xl shadow p-4 relative">
+    <div class="w-full md:w-1/2 relative">
+      <!-- Ribbon -->
+      <div class="absolute left-0 top-0 h-16 w-16 z-10">
+        <div class="absolute transform -rotate-45 bg-red-600 text-center text-white font-semibold py-1 left-[-35px] top-[32px] w-[170px] shadow-lg" style="font-size:1rem;letter-spacing:1px;">
+          TAMAMLANDI
+        </div>
+      </div>
+      <div class="flex gap-2 overflow-x-auto">
+        <img src="images/proje/proje.html/Uçmakdere Çift Katlı Çelik Ev Projesi/1.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Uçmakdere Çift Katlı Çelik Ev Projesi/2.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Uçmakdere Çift Katlı Çelik Ev Projesi/3.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Uçmakdere Çift Katlı Çelik Ev Projesi/4.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Uçmakdere Çift Katlı Çelik Ev Projesi/5.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Uçmakdere Çift Katlı Çelik Ev Projesi/6.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Uçmakdere Çift Katlı Çelik Ev Projesi/7.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Uçmakdere Çift Katlı Çelik Ev Projesi/8.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+      </div>
+    </div>
+    <div class="w-full md:w-1/2">
+      <h2 class="text-2xl font-bold mb-4 text-[var(--primary-blue)]">Uçmakdere Çift Katlı Çelik Ev Projesi</h2>
+      <p class="text-gray-700 text-base">
+        Uçmakdere’deki bu çift katlı çelik ev, geniş aileler ve yazlık kullanım için uygundur. Panoramik manzaraya sahip bu ev, doğayla uyumlu yapısı ve yüksek dayanımıyla öne çıkmaktadır.
+      </p>
+    </div>
+  </div>
+
+  <!-- Uçmakdere Çelik Ev Projesi -->
+  <div class="flex flex-col md:flex-row gap-8 items-center mb-12 bg-white rounded-xl shadow p-4 relative">
+    <div class="w-full md:w-1/2 relative">
+      <!-- Ribbon -->
+      <div class="absolute left-0 top-0 h-16 w-16 z-10">
+        <div class="absolute transform -rotate-45 bg-red-600 text-center text-white font-semibold py-1 left-[-35px] top-[32px] w-[170px] shadow-lg" style="font-size:1rem;letter-spacing:1px;">
+          TAMAMLANDI
+        </div>
+      </div>
+      <div class="flex gap-2 overflow-x-auto">
+        <img src="images/proje/proje.html/Uçmakdere Çelik Ev Projesi/1.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Uçmakdere Çelik Ev Projesi/2.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Uçmakdere Çelik Ev Projesi/3.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Uçmakdere Çelik Ev Projesi/4.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Uçmakdere Çelik Ev Projesi/5.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Uçmakdere Çelik Ev Projesi/6.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Uçmakdere Çelik Ev Projesi/7.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Uçmakdere Çelik Ev Projesi/8.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Uçmakdere Çelik Ev Projesi/9.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Uçmakdere Çelik Ev Projesi/10.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Uçmakdere Çelik Ev Projesi/11.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Uçmakdere Çelik Ev Projesi/12.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+      </div>
+    </div>
+    <div class="w-full md:w-1/2">
+      <h2 class="text-2xl font-bold mb-4 text-[var(--primary-blue)]">Uçmakdere Çelik Ev Projesi</h2>
+      <p class="text-gray-700 text-base">
+        Doğayla iç içe bir yaşam sunan Uçmakdere çelik ev projesi, doğa tutkunları için tasarlanmıştır. Paslanmaz yapısı ve yüksek yalıtımı sayesinde uzun yıllar güvenle kullanılabilir.
+      </p>
+    </div>
+  </div>
+
+  <!-- Silivri Kınalı Prefabrik Ev Projesi -->
+  <div class="flex flex-col md:flex-row gap-8 items-center mb-12 bg-white rounded-xl shadow p-4 relative">
+    <div class="w-full md:w-1/2 relative">
+      <!-- Ribbon -->
+      <div class="absolute left-0 top-0 h-16 w-16 z-10">
+        <div class="absolute transform -rotate-45 bg-red-600 text-center text-white font-semibold py-1 left-[-35px] top-[32px] w-[170px] shadow-lg" style="font-size:1rem;letter-spacing:1px;">
+          TAMAMLANDI
+        </div>
+      </div>
+      <div class="flex gap-2 overflow-x-auto">
+        <img src="images/proje/proje.html/Silivri Kınalı Prefabrik Ev Projesi/1.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Silivri Kınalı Prefabrik Ev Projesi/2.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Silivri Kınalı Prefabrik Ev Projesi/3.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Silivri Kınalı Prefabrik Ev Projesi/4.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+      </div>
+    </div>
+    <div class="w-full md:w-1/2">
+      <h2 class="text-2xl font-bold mb-4 text-[var(--primary-blue)]">Silivri Kınalı Prefabrik Ev Projesi</h2>
+      <p class="text-gray-700 text-base">
+        Silivri’nin Kınalı bölgesinde konumlanan bu prefabrik ev projesi, kısa sürede kurulumu tamamlanan, modern ve ekonomik bir konut çözümüdür. Bahçeli yaşam için idealdir.
+      </p>
+    </div>
+  </div>
+
+  <!-- Saray Velimeşe Çelik Ev projesi -->
+  <div class="flex flex-col md:flex-row gap-8 items-center mb-12 bg-white rounded-xl shadow p-4 relative">
+    <div class="w-full md:w-1/2 relative">
+      <!-- Ribbon -->
+      <div class="absolute left-0 top-0 h-16 w-16 z-10">
+        <div class="absolute transform -rotate-45 bg-red-600 text-center text-white font-semibold py-1 left-[-35px] top-[32px] w-[170px] shadow-lg" style="font-size:1rem;letter-spacing:1px;">
+          TAMAMLANDI
+        </div>
+      </div>
+      <div class="flex gap-2 overflow-x-auto">
+        <img src="images/proje/proje.html/Saray Velimeşe Çelik Ev projesi/1.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Saray Velimeşe Çelik Ev projesi/2.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Saray Velimeşe Çelik Ev projesi/3.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Saray Velimeşe Çelik Ev projesi/4.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Saray Velimeşe Çelik Ev projesi/5.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Saray Velimeşe Çelik Ev projesi/6.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Saray Velimeşe Çelik Ev projesi/7.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Saray Velimeşe Çelik Ev projesi/8.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+      </div>
+    </div>
+    <div class="w-full md:w-1/2">
+      <h2 class="text-2xl font-bold mb-4 text-[var(--primary-blue)]">Saray Velimeşe Çelik Ev Projesi</h2>
+      <p class="text-gray-700 text-base">
+        Saray Velimeşe’de yer alan bu çelik ev projesi, yüksek mukavemetli yapısıyla dört mevsim konfor sağlamaktadır. Depreme dayanıklı sistemi ve modern görünümüyle tercih edilmektedir.
+      </p>
+    </div>
+  </div>
+
+  <!-- Muratlı Tek Katlı Prefabrik Projesi -->
+  <div class="flex flex-col md:flex-row gap-8 items-center mb-12 bg-white rounded-xl shadow p-4 relative">
+    <div class="w-full md:w-1/2 relative">
+      <!-- Ribbon -->
+      <div class="absolute left-0 top-0 h-16 w-16 z-10">
+        <div class="absolute transform -rotate-45 bg-red-600 text-center text-white font-semibold py-1 left-[-35px] top-[32px] w-[170px] shadow-lg" style="font-size:1rem;letter-spacing:1px;">
+          TAMAMLANDI
+        </div>
+      </div>
+      <div class="flex gap-2 overflow-x-auto">
+        <img src="images/proje/proje.html/Muratlı Tek Katlı Prefabrik Projesi/1.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Muratlı Tek Katlı Prefabrik Projesi/2.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Muratlı Tek Katlı Prefabrik Projesi/3.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Muratlı Tek Katlı Prefabrik Projesi/4.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+      </div>
+    </div>
+    <div class="w-full md:w-1/2">
+      <h2 class="text-2xl font-bold mb-4 text-[var(--primary-blue)]">Muratlı Tek Katlı Prefabrik Projesi</h2>
+      <p class="text-gray-700 text-base">
+        Tek katlı yapısıyla öne çıkan Muratlı prefabrik evi, sade ve işlevsel yaşam alanı sunar. Kırsal bölgeler ve yazlık kullanım için tercih edilen bu proje, estetik ve pratikliği bir araya getirmiştir.
+      </p>
+    </div>
+  </div>
+
+  <!-- Malkara 85m2 Prefabrik Ev Projesi -->
+  <div class="flex flex-col md:flex-row gap-8 items-center mb-12 bg-white rounded-xl shadow p-4 relative">
+    <div class="w-full md:w-1/2 relative">
+      <!-- Ribbon -->
+      <div class="absolute left-0 top-0 h-16 w-16 z-10">
+        <div class="absolute transform -rotate-45 bg-red-600 text-center text-white font-semibold py-1 left-[-35px] top-[32px] w-[170px] shadow-lg" style="font-size:1rem;letter-spacing:1px;">
+          TAMAMLANDI
+        </div>
+      </div>
+      <div class="flex gap-2 overflow-x-auto">
+        <img src="images/proje/proje.html/Malkara 85m2 Prefabrik Ev Projesi/1.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Malkara 85m2 Prefabrik Ev Projesi/2.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Malkara 85m2 Prefabrik Ev Projesi/3.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Malkara 85m2 Prefabrik Ev Projesi/4.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Malkara 85m2 Prefabrik Ev Projesi/5.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Malkara 85m2 Prefabrik Ev Projesi/6.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Malkara 85m2 Prefabrik Ev Projesi/7.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Malkara 85m2 Prefabrik Ev Projesi/8.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+      </div>
+    </div>
+    <div class="w-full md:w-1/2">
+      <h2 class="text-2xl font-bold mb-4 text-[var(--primary-blue)]">Malkara 85m² Prefabrik Ev Projesi</h2>
+      <p class="text-gray-700 text-base">
+        Malkara’da hayata geçirilen 85 metrekarelik prefabrik ev, kompakt ve kullanışlı bir yaşam alanı arayanlar için idealdir. Kısa sürede teslim edilen bu yapı, dayanıklılığı ve uygun maliyeti ile öne çıkmaktadır.
+      </p>
+    </div>
+  </div>
+
+  <!-- Gaziosmanpaşa Çift Katlı Prefabrik Ev Projesi -->
+  <div class="flex flex-col md:flex-row gap-8 items-center mb-12 bg-white rounded-xl shadow p-4 relative">
+    <div class="w-full md:w-1/2 relative">
+      <!-- Ribbon -->
+      <div class="absolute left-0 top-0 h-16 w-16 z-10">
+        <div class="absolute transform -rotate-45 bg-red-600 text-center text-white font-semibold py-1 left-[-35px] top-[32px] w-[170px] shadow-lg" style="font-size:1rem;letter-spacing:1px;">
+          TAMAMLANDI
+        </div>
+      </div>
+      <div class="flex gap-2 overflow-x-auto">
+        <img src="images/proje/proje.html/Gaziosmanpaşa Çift Katlı Prefabrik Ev Projesi/1.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Gaziosmanpaşa Çift Katlı Prefabrik Ev Projesi/2.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Gaziosmanpaşa Çift Katlı Prefabrik Ev Projesi/3.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Gaziosmanpaşa Çift Katlı Prefabrik Ev Projesi/4.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+      </div>
+    </div>
+    <div class="w-full md:w-1/2">
+      <h2 class="text-2xl font-bold mb-4 text-[var(--primary-blue)]">Gaziosmanpaşa Çift Katlı Prefabrik Ev Projesi</h2>
+      <p class="text-gray-700 text-base">
+        Şehir hayatının ortasında hızlı kurulum ve kaliteli yaşam sunan Gaziosmanpaşa’daki bu çift katlı prefabrik ev projesi, pratik çözümlerle estetiği bir araya getiriyor. Geniş iç hacmi ve modüler yapısı ile konforlu bir yaşam alanı sunar.
+      </p>
+    </div>
+  </div>
+
+  <!-- Edirne Çift Katlı Çelik Ev Projesi -->
+  <div class="flex flex-col md:flex-row gap-8 items-center mb-12 bg-white rounded-xl shadow p-4 relative">
+    <div class="w-full md:w-1/2 relative">
+      <!-- Ribbon -->
+      <div class="absolute left-0 top-0 h-16 w-16 z-10">
+        <div class="absolute transform -rotate-45 bg-red-600 text-center text-white font-semibold py-1 left-[-35px] top-[32px] w-[170px] shadow-lg" style="font-size:1rem;letter-spacing:1px;">
+          TAMAMLANDI
+        </div>
+      </div>
+      <div class="flex gap-2 overflow-x-auto">
+        <img src="images/proje/proje.html/Edirne Çift Katlı Çelik Ev Projesi/1.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Edirne Çift Katlı Çelik Ev Projesi/2.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Edirne Çift Katlı Çelik Ev Projesi/3.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Edirne Çift Katlı Çelik Ev Projesi/4.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Edirne Çift Katlı Çelik Ev Projesi/5.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Edirne Çift Katlı Çelik Ev Projesi/6.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Edirne Çift Katlı Çelik Ev Projesi/7.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Edirne Çift Katlı Çelik Ev Projesi/8.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Edirne Çift Katlı Çelik Ev Projesi/9.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Edirne Çift Katlı Çelik Ev Projesi/10.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Edirne Çift Katlı Çelik Ev Projesi/11.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Edirne Çift Katlı Çelik Ev Projesi/12.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Edirne Çift Katlı Çelik Ev Projesi/13.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Edirne Çift Katlı Çelik Ev Projesi/14.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Edirne Çift Katlı Çelik Ev Projesi/15.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Edirne Çift Katlı Çelik Ev Projesi/16.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Edirne Çift Katlı Çelik Ev Projesi/17.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Edirne Çift Katlı Çelik Ev Projesi/18.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Edirne Çift Katlı Çelik Ev Projesi/19.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Edirne Çift Katlı Çelik Ev Projesi/20.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Edirne Çift Katlı Çelik Ev Projesi/21.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+        <img src="images/proje/proje.html/Edirne Çift Katlı Çelik Ev Projesi/22.jpg" class="rounded-lg w-48 h-32 object-cover" alt="">
+      </div>
+    </div>
+    <div class="w-full md:w-1/2">
+      <h2 class="text-2xl font-bold mb-4 text-[var(--primary-blue)]">Edirne Çift Katlı Çelik Ev Projesi</h2>
+      <p class="text-gray-700 text-base">
+        Edirne’de inşa edilen bu çift katlı çelik ev, modern yaşamın gereksinimlerine uygun olarak yüksek yalıtım ve sağlamlık prensipleriyle tasarlanmıştır. Estetik mimarisiyle dikkat çeken yapı, uzun ömürlü ve çevre dostu malzemelerle inşa edilmiştir.
+      </p>
+    </div>
+  </div>
+
+</div>
+<footer class="footer site-footer" style="position: static;">
+  <div class="container">
+    <div class="row">
+      <div class="footer-col">
+        <h4>Site İçi Bağlantılar</h4>
+        <ul>
+          <li><a href="kurumsal.html">Hakkımızda</a></li>
+          <li><a href="index.html#hizmet">Hizmetlerimiz</a></li>
+          <li><a href="celikev.html">Çelik Ev Modelleri</a></li>
+          <li><a href="prefabrik.html">Prefabrik Ev Modelleri</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Diğer</h4>
+        <ul>
+          <li><a href="index.html#sss">Sıkça sorulan sorular</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+          <li><a href="projeler.html">Projelerimiz</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Adresimiz</h4>
+        <p class="text-light">
+          Seymenli, İsmet İnönü bulvarı no 156, 59000 Tekirdağ Merkez/Tekirdağ
+        </p>
+        <a href="https://www.google.com/maps/dir//ATA%C5%9E+%C3%87EL%C4%B0K+prefabrik+konteyner+Seymenli+%C4%B0smet+%C4%B1n%C3%B6n%C3%BC+bulvar%C4%B1+no+156+59000+Tekirda%C4%9F+Merkez%2FTekirda%C4%9F/@40.9669153,27.3766455,8561m/data=!3m1!1e3!4m8!4m7!1m0!1m5!1m1!1s0x14b4f6a038b81715:0x9c5f3b10a0022f24!2m2!1d27.3766456!2d40.966913?entry=ttu&g_ep=EgoyMDI1MDcxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="inline-block mt-2 px-4 py-2 border-2 border-blue-700 text-blue-700 rounded-xl font-semibold hover:bg-blue-700 hover:text-white transition"
+        ><i class="fa-solid fa-diamond-turn-right"></i> Yol Tarifi</a>
+        </div>
+      <div class="footer-col">
+        <h4>Sosyal Medya Hesaplarımız</h4>
+        <div class="social-links">
+          <a href="https://www.facebook.com/atascelik/?locale=tr_TR"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/atas_celik/"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <img src="images/logo.png" alt="logo" style="width: 50vw;">
+        </div>
+      </div>
+    </div>
+    <div class="row footer-bottom">
+      <ul>
+        <li>
+          <p class="text-light">ATAŞ ÇELİK YAPI Sanayi İç ve Dış Tic.Ltd.Şti. ©2025 Tüm Hakları Saklıdır.</p>
+        </li>
+        <!-- <li>
+          <a href="//www.dmca.com/Protection/Status.aspx?ID=8267f075-a06d-4103-a686-2fd7f0d4a564" title="DMCA.com Protection Status" class="dmca-badge"> <img src ="https://images.dmca.com/Badges/dmca-badge-w100-5x1-11.png?ID=8267f075-a06d-4103-a686-2fd7f0d4a564"  alt="DMCA.com Protection Status" /></a>
+        </li> -->
+        <li>
+          <p class="text-light">Site Tasarımı: <a class="text-decoration-none text-light" target="_blank" href="https://www.linkedin.com/in/muhammed-salih-acar-206826329/">Muhammed Salih Acar</a></p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<button id="scrollToTopBtn" class="floating-btn scroll-to-top-btn" style="display:none;position:fixed;bottom:20px;right:20px;z-index:999;">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+    <script src="javascript/modal.js"></script>
+    <script src="javascript/navbar.js"></script>
+    <script src="javascript/scrollTop.js"></script>
+    </body>
+</html> 

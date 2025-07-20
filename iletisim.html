@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim | ATAŞ Çelik Yapı</title>
+    <!-- Açıklama: Arama motorları ve sosyal medya için özet bilgi -->
+    <meta name="description" content="ATAŞ Çelik Yapı; Tekirdağ ve çevresinde hafif çelik, prefabrik ve konteyner yapı çözümleri sunar. Güvenilir ve ekonomik yapılar için bizimle iletişime geçin.">
+
+    <!-- Anahtar kelimeler: (isteğe bağlı, artık SEO için az önemlidir) -->
+    <meta name="keywords" content="hafif çelik yapı, prefabrik ev, konteyner yapı, Tekirdağ çelik yapı, ATAŞ Çelik">
+
+    <!-- Yazar bilgisi -->
+    <meta name="author" content="ATAŞ Çelik Yapı">
+
+    <!-- Sosyal medya için Open Graph (Facebook, LinkedIn vb.) -->
+    <meta property="og:title" content="ATAŞ Çelik Yapı | Hafif Çelik, Prefabrik ve Konteyner Yapılar">
+    <meta property="og:description" content="Tekirdağ'da hafif çelik, prefabrik ve konteyner yapı hizmetlerinde uzman firmayız. Dayanıklı ve modern çözümler sunuyoruz.">
+    <meta property="og:image" content="https://www.orneksite.com/images/kapak.jpg"> <!-- Gerçek bir görsel URL ile değiştir -->
+    <meta property="og:url" content="https://www.orneksite.com"> <!-- Gerçek site URL ile değiştir -->
+    <meta property="og:type" content="website">
+
+    <!-- Twitter için kart ayarları -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ATAŞ Çelik Yapı">
+    <meta name="twitter:description" content="Prefabrik, hafif çelik ve konteyner yapı çözümleri için ATAŞ Çelik Yapı’ya güvenin.">
+    <meta name="twitter:image" content="https://www.orneksite.com/images/kapak.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/icon.png" type="image/x-icon">
+
+    <!-- CSS ve stil dosyaları -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>:root {--primary-dark: #091057;--primary-blue: #024CAA;--accent-orange: #EC8305;--neutral-light: #DBD3D3;}</style>
+</head>
+<body class="bg-gray-50">
+  <div class="header-top fixed-top">  
+    <!-- style="background: #323393;" -->
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center py-1 text-light">
+        <div class="header-info-text hidden md:block" style="font-size: 0.8rem;">
+          Tüm talep ve istekleriniz için satış ofisimizden veya telefon numaramızdan bizlere ulaşabilirsiniz.
+        </div>
+        <div class="header-right d-flex align-items-center gap-4" style="font-size: 0.8rem;">
+          <span class="d-flex align-items-center gap-1 item1">
+            <i class="fa-solid fa-phone"></i> 0282 231 24 24
+          </span>
+          <span class="d-flex align-items-center gap-1 item2">
+            <i class="fa-solid fa-clock"></i> 09:00–17:00
+          </span>
+          <span class="d-flex align-items-center gap-1 header-social hidden md:flex">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+      <!-- Overlay for mobile menu -->
+      <div id="mobile-menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div>
+
+      <nav class="fixed top-10 left-0 w-full bg-transparent z-50 transition-all duration-300 ease-in-out" id="navbar">
+        <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
+            <a href="index.html" class="flex items-center">
+                 <img src="images/logo.png" alt="logo" class="logo">
+            </a>
+            <div class="flex items-center lg:order-2">
+                <div class="hidden mt-2 mr-4 sm:inline-block">
+                    <span></span>
+                </div>
+    
+                <a href="tel:02822312424"
+                class="relative overflow-hidden text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-xl text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 ripple-effect-button">
+                <span class="relative z-10 text-white">Arayın</span>
+              </a>
+                <button data-collapse-toggle="mobile-menu-2" type="button"
+                    class="inline-flex items-center p-2 ml-1 text-sm text-gray-400 rounded-lg lg:hidden hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600"
+                    aria-controls="mobile-menu-2" aria-expanded="false">
+                    <span class="sr-only">Menüyü Aç</span>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Desktop menu -->
+            <div class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1" id="desktop-menu">
+                <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0 items-center">
+                    <!-- <li class="py-2 lg:py-0"><a href="index.html" class="block py-2 pl-3 pr-4 text-white bg-red-700 rounded lg:bg-transparent lg:text-red-500 lg:p-0 dark:text-white text-center" aria-current="page">Anasayfa</a></li> -->
+                    <li class="py-2 lg:py-0"><a href="kurumsal.html" class="block py-2 pl-3 pr-4 text-white border-b border-gray-700 hover:bg-gray-700 lg:hover:bg-transparent lg:border-0 lg:hover:text-red-500 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700 text-center">Kurumsal</a></li>
+                    <li class="py-2 lg:py-0"><a href="celikev.html" class="block py-2 pl-3 pr-4 text-white border-b border-gray-700 hover:bg-gray-700 lg:hover:bg-transparent lg:border-0 lg:hover:text-red-500 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700 text-center">Çelik Ev</a></li>
+                    <li class="py-2 lg:py-0"><a href="prefabrik.html" class="block py-2 pl-3 pr-4 text-white border-b border-gray-700 hover:bg-gray-700 lg:hover:bg-transparent lg:border-0 lg:hover:text-red-500 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700 text-center">Prefabrik Ev</a></li>
+                    <li class="py-2 lg:py-0"><a href="konteyner.html" class="block py-2 pl-3 pr-4 text-white border-b border-gray-700 hover:bg-gray-700 lg:hover:bg-transparent lg:border-0 lg:hover:text-red-500 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700 text-center">Konteyner</a></li>
+                    <li class="py-2 lg:py-0"><a href="projeler.html" class="block py-2 pl-3 pr-4 text-white border-b border-gray-700 hover:bg-gray-700 lg:hover:bg-transparent lg:border-0 lg:hover:text-red-500 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700 text-center">Projeler</a></li>
+                    <li class="py-2 lg:py-0"><a href="iletisim.html" class="block py-2 pl-3 pr-4 text-white border-b border-gray-700 hover:bg-gray-700 lg:hover:bg-transparent lg:border-0 lg:hover:text-red-500 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700 text-center">İletişim</a></li>
+                </ul>
+            </div>
+            <!-- Mobile menu (hidden by default) -->
+            <div id="mobile-menu-2" class="fixed top-0 right-0 h-full w-3/4 max-w-xs bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden hidden pt-8">
+                <button id="mobile-menu-close" class="absolute top-12 right-4 text-2xl text-gray-700 hover:text-black focus:outline-none">&times;</button>
+                <ul class="flex flex-col font-medium mt-16 space-y-4 px-6">
+                    <!-- <li><a href="index.html" class="block py-3 px-4 text-black text-lg text-center">Anasayfa</a></li> -->
+                    <li><a href="index.html" class="block py-3 px-4 text-black text-lg text-center">Anasayfa</a></li>
+                    <li><a href="kurumsal.html" class="block py-3 px-4 text-black text-lg text-center">Kurumsal</a></li>
+                    <li><a href="celikev.html" class="block py-3 px-4 text-black text-lg text-center">Çelik Ev</a></li>
+                    <li><a href="prefabrik.html" class="block py-3 px-4 text-black text-lg text-center">Prefabrik Ev</a></li>
+                    <li><a href="konteyner.html" class="block py-3 px-4 text-black text-lg text-center">Konteyner</a></li>
+                    <li><a href="projeler.html" class="block py-3 px-4 text-black text-lg text-center">Projeler</a></li>
+                    <li><a href="iletisim.html" class="block py-3 px-4 text-black text-lg text-center">İletişim</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+  
+  <div class="catalog-banner">
+    <img src="images/kurumsalbg.jpg" alt="Galeri Arkaplan">
+</div>
+
+<div class="relative bg-black">
+  <div class="flex justify-center">
+    <h1 class="text-center text-3xl font-bold text-white sm:text-4xl sm:leading-none m-6">
+      İletişim
+    </h1>
+  </div>
+    <div class="absolute inset-x-0 bottom-0">
+      <svg viewBox="0 0 224 12" fill="currentColor" class="-mb-1 w-full text-white" preserveAspectRatio="none">
+        <path d="M0,0 C48.8902582,6.27314026 86.2235915,9.40971039 112,9.40971039 C137.776408,9.40971039 175.109742,6.27314026 224,0 L224,12.0441132 L0,12.0441132 L0,0 Z"></path>
+      </svg>
+    </div>
+    <div class="mx-auto px-4 py-4 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8 lg:py-8">
+      <div class="relative max-w-2xl sm:mx-auto sm:max-w-xl sm:text-center md:max-w-2xl">
+        <p class="mb-8 text-center text-base text-gray-200 md:text-lg">
+            Bizimle iletişime geçmek için aşağıdaki formu doldurabilir veya iletişim bilgilerimizi kullanabilirsiniz. Sorularınız, talepleriniz ve işbirliği tekliflerinizi memnuniyetle karşılıyoruz.</p>
+        <p class="mb-10 max-w-md text-xs tracking-wide text-indigo-100 sm:mx-auto sm:text-sm md:mb-8"></p>
+      </div>
+    </div>
+  </div>
+
+    <div class="max-w-6xl mx-auto px-2 md:px-6 py-8">
+    <!-- Breadcrumb -->
+        <nav class="text-sm mb-6 flex items-center gap-2">
+        <a href="index.html" class="font-semibold shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] text-gray-700 hover:text-[var(--primary-blue)]">Anasayfa</a>
+        <span class="text-gray-400">&gt;</span>
+        <span class="font-semibold text-gray-700">İletişim</span>
+        </nav>
+<section class="mb-32">
+    <div id="map" class="relative h-[300px] overflow-hidden bg-cover bg-[50%] bg-no-repeat">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46353.34997907942!2d27.379245327263195!3d40.96882898278513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b4f6a038b81715%3A0x9c5f3b10a0022f24!2zQVRBxZ4gw4dFTMSwSyBwcmVmYWJyaWsga29udGV5bmVy!5e1!3m2!1str!2str!4v1753029245829!5m2!1str!2str" width="100%" height="650" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="container px-6 md:px-12">
+      <div
+        class="block rounded-lg bg-[hsla(0,0%,100%,0.8)] px-6 py-12 md:py-16 md:px-12 -mt-[100px] backdrop-blur-[30px] border border-gray-300">
+        <div class="flex flex-wrap">
+          <div class="w-full shrink-0 grow-0 basis-auto md:px-3 lg:mb-0 lg:w-9/12 lg:px-6">
+            <form>
+                <h2 class="mb-6 text-center font-sans text-3xl font-bold tracking-tight text-[var(--primary-dark)] sm:text-4xl sm:leading-none">İletişim Formu</h2>
+                <div class="relative mb-6" data-te-input-wrapper-init>
+                    <input type="text"
+                        class="peer block min-h-[auto] w-full rounded border-2 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-[var(--primary-blue)] data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none "
+                        id="adsoyad" />
+                    <label
+                        class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-[var(--primary-blue)] transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-[var(--accent-orange)] peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none "
+                        for="adsoyad">Ad-Soyad</label>
+                </div>
+                <div class="relative mb-6" data-te-input-wrapper-init>
+                    <input type="email"
+                        class="peer block min-h-[auto] w-full rounded border-2 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-[var(--primary-blue)] data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none "
+                        id="email" />
+                    <label
+                        class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-[var(--primary-blue)] transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-[var(--accent-orange)] peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none "
+                        for="email">E-posta</label>
+                </div>
+                <div class="relative mb-6" data-te-input-wrapper-init>
+                    <input type="text"
+                        class="peer block min-h-[auto] w-full rounded border-2 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-[var(--primary-blue)] data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none "
+                        id="telefon" />
+                    <label
+                        class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-[var(--primary-blue)] transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-[var(--accent-orange)] peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none "
+                        for="telefon">Telefon</label>
+                </div>
+                <div class="relative mb-6" data-te-input-wrapper-init>
+                    <textarea
+                        class="peer block min-h-[auto] w-full rounded border-2 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none "
+                        id="mesaj" rows="3"></textarea>
+                    <label for="mesaj"
+                        class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-[var(--primary-blue)] transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-[var(--accent-orange)] peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none ">Mesajınız</label>
+                </div>
+                <button type="button"
+                    class="mb-6 w-full rounded bg-[var(--accent-orange)] text-white px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal lg:mb-0 hover:bg-[var(--primary-blue)]">
+                    Gönder
+                </button>
+            </form>
+          </div>
+          <div class="w-full shrink-0 grow-0 basis-auto lg:w-3/12">
+            <div class="flex flex-wrap">
+              <div class="mb-12 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:w-full lg:px-6 xl:w-6/12">
+                <div class="flex items-start">
+                  <div class="shrink-0">
+                    <div class="contactItem inline-block rounded-md p-4 text-primary">
+                        <i class="text-white text-3xl fa-solid fa-mobile-retro "></i>
+                    </div>
+                  </div>
+                  <div class="ml-6 grow">
+                    <p class="mb-2 font-bold ">
+                      Mobil
+                    </p>
+                    <p class="text-sm text-neutral-500">
+                        0282 231 24 24
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-12 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:w-full lg:px-6 xl:w-6/12">
+                <div class="flex items-start">
+                  <div class="srink-0">
+                    <div class="contactItem inline-block rounded-md p-4 text-primary">
+                        <i class="text-white text-3xl fa-solid fa-location-dot "></i>
+                    </div>
+                  </div>
+                  <div class="ml-6 grow">
+                    <p class="mb-2 font-bold ">
+                      Adres
+                    </p>
+                    <p class="text-sm text-neutral-500">
+                        Seymenli, İsmet İnönü bulvarı no 156, 59000 Tekirdağ Merkez/Tekirdağ
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="mb-12 w-full shrink-0 grow-0 basis-auto md:mb-0 md:w-6/12 md:px-3 lg:mb-12 lg:w-full lg:px-6 xl:w-6/12">
+                <div class="align-start flex">
+                  <div class="shrink-0">
+                    <div class="contactItem inline-block rounded-md p-4 text-primary">
+                        <i class="text-white text-3xl fa-solid fa-envelope "></i>
+  
+                    </div>
+                  </div>
+                  <div class="ml-6 grow">
+                    <p class="mb-2 font-bold ">E-posta</p>
+                    <p class="text-neutral-500">info@atascelikyapi.com
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<footer class="footer site-footer" style="position: static;">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>Site İçi Bağlantılar</h4>
+          <ul>
+            <li><a href="kurumsal.html">Hakkımızda</a></li>
+            <li><a href="index.html#hizmet">Hizmetlerimiz</a></li>
+            <li><a href="celikev.html">Çelik Ev Modelleri</a></li>
+            <li><a href="prefabrik.html">Prefabrik Ev Modelleri</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Diğer</h4>
+          <ul>
+            <li><a href="index.html#sss">Sıkça sorulan sorular</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+            <li><a href="projeler.html">Projelerimiz</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Adresimiz</h4>
+          <p class="text-light">
+            Seymenli, İsmet İnönü bulvarı no 156, 59000 Tekirdağ Merkez/Tekirdağ
+          </p>
+          <a href="https://www.google.com/maps/dir//ATA%C5%9E+%C3%87EL%C4%B0K+prefabrik+konteyner+Seymenli+%C4%B0smet+%C4%B1n%C3%B6n%C3%BC+bulvar%C4%B1+no+156+59000+Tekirda%C4%9F+Merkez%2FTekirda%C4%9F/@40.9669153,27.3766455,8561m/data=!3m1!1e3!4m8!4m7!1m0!1m5!1m1!1s0x14b4f6a038b81715:0x9c5f3b10a0022f24!2m2!1d27.3766456!2d40.966913?entry=ttu&g_ep=EgoyMDI1MDcxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="inline-block mt-2 px-4 py-2 border-2 border-blue-700 text-blue-700 rounded-xl font-semibold hover:bg-blue-700 hover:text-white transition"
+          ><i class="fa-solid fa-diamond-turn-right"></i> Yol Tarifi</a>
+          </div>
+        <div class="footer-col">
+          <h4>Sosyal Medya Hesaplarımız</h4>
+          <div class="social-links">
+            <a href="https://www.facebook.com/atascelik/?locale=tr_TR"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/atas_celik/"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <img src="images/logo.png" alt="logo" style="width: 50vw;">
+          </div>
+        </div>
+      </div>
+      <div class="row footer-bottom">
+        <ul>
+          <li>
+            <p class="text-light">ATAŞ ÇELİK YAPI Sanayi İç ve Dış Tic.Ltd.Şti. ©2025 Tüm Hakları Saklıdır.</p>
+          </li>
+          <!-- <li>
+            <a href="//www.dmca.com/Protection/Status.aspx?ID=8267f075-a06d-4103-a686-2fd7f0d4a564" title="DMCA.com Protection Status" class="dmca-badge"> <img src ="https://images.dmca.com/Badges/dmca-badge-w100-5x1-11.png?ID=8267f075-a06d-4103-a686-2fd7f0d4a564"  alt="DMCA.com Protection Status" /></a>
+          </li> -->
+          <li>
+            <p class="text-light">Site Tasarımı: <a class="text-decoration-none text-light" target="_blank" href="https://www.linkedin.com/in/muhammed-salih-acar-206826329/">Muhammed Salih Acar</a></p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <button id="scrollToTopBtn" class="floating-btn scroll-to-top-btn" style="display:none;position:fixed;bottom:20px;right:20px;z-index:999;">
+<i class="fa-solid fa-arrow-up"></i>
+</button>
+  <script src="javascript/modal.js"></script>
+  <script src="javascript/navbar.js"></script>
+  <script src="javascript/scrollTop.js"></script>
+</body>
+</html> 
