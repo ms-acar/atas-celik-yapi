@@ -81,6 +81,31 @@ function renderCardsPaginated(filterType, filterM2, page = 1) {
   renderPagination(totalPages, currentPage, filterType, filterM2);
 }
 
+    // Mobilde m2 dropdown tıklama ile açılıp kapanmalı, açıkken içine tıklanınca kapanmasın
+    document.addEventListener('DOMContentLoaded', function() {
+      var btn = document.getElementById('custom-dropdown-btn');
+      var list = document.getElementById('custom-dropdown-list');
+      if(btn && list) {
+        btn.onclick = function(e) {
+          e.stopPropagation();
+          if(list.classList.contains('show')) {
+            list.classList.remove('show');
+          } else {
+            list.classList.add('show');
+          }
+        };
+        list.onclick = function(e) {
+          e.stopPropagation(); // Listeye tıklanınca kapanmasın
+        };
+        // Sayfada başka yere tıklanınca kapansın
+        document.addEventListener('click', function(e) {
+          if(!btn.contains(e.target) && !list.contains(e.target)) {
+            list.classList.remove('show');
+          }
+        });
+      }
+    });
+
 function renderPagination(totalPages, currentPage, filterType, filterM2) {
   const pagination = document.getElementById('pagination');
   pagination.innerHTML = '';
@@ -104,7 +129,61 @@ function setupCustomDropdown(onSelect) {
     `<li data-value="${m2}">${m2} m²</li>`
   ).join('');
 
-  // Açma/Kapama fonksiyonu
+  // Event temizleyici
+  function clearAllEvents() {
+    btn.replaceWith(btn.cloneNode(true));
+    list.replaceWith(list.cloneNode(true));
+  }
+
+  function addEvents() {
+    clearAllEvents();
+    const btnNew = document.getElementById('custom-dropdown-btn');
+    const listNew = document.getElementById('custom-dropdown-list');
+    // Masaüstü
+    if(window.innerWidth >= 768) {
+      btnNew.addEventListener('mouseenter', openDropdown);
+      btnNew.addEventListener('click', () => {
+        if (listNew.classList.contains('show')) {
+          closeDropdown();
+        } else {
+          openDropdown();
+        }
+      });
+      let closeTimeout;
+      wrapper.addEventListener('mouseleave', () => {
+        closeTimeout = setTimeout(closeDropdown, 200);
+      });
+      wrapper.addEventListener('mouseenter', () => {
+        clearTimeout(closeTimeout);
+      });
+    } else {
+      btnNew.addEventListener('click', function(e) {
+        e.stopPropagation();
+        if (listNew.classList.contains('show')) {
+          closeDropdown();
+        } else {
+          openDropdown();
+        }
+      });
+      listNew.addEventListener('click', function(e) {
+        e.stopPropagation();
+      });
+      document.addEventListener('click', function(e) {
+        if(!btnNew.contains(e.target) && !listNew.contains(e.target)) {
+          closeDropdown();
+        }
+      });
+    }
+    // Seçim işlemi
+    listNew.querySelectorAll('li').forEach(li => {
+      li.addEventListener('click', (e) => {
+        btnNew.childNodes[0].nodeValue = li.textContent;
+        closeDropdown();
+        onSelect(li.getAttribute('data-value'));
+      });
+    });
+  }
+
   function openDropdown() {
     list.classList.add('show');
     btn.setAttribute('aria-expanded', 'true');
@@ -114,35 +193,9 @@ function setupCustomDropdown(onSelect) {
     btn.setAttribute('aria-expanded', 'false');
   }
 
-  // Hem tıkla hem hover ile aç
-  btn.addEventListener('mouseenter', openDropdown);
-  btn.addEventListener('click', () => {
-    if (list.classList.contains('show')) {
-      closeDropdown();
-    } else {
-      openDropdown();
-    }
-  });
-
-  // Mouse leave ile hemen kapanmasın, kısa bir gecikme ile kapansın
-  let closeTimeout;
-  wrapper.addEventListener('mouseleave', () => {
-    closeTimeout = setTimeout(closeDropdown, 200);
-  });
-  wrapper.addEventListener('mouseenter', () => {
-    clearTimeout(closeTimeout);
-  });
-
-  window.addEventListener('scroll', () => {
-  });
-
-  list.querySelectorAll('li').forEach(li => {
-    li.addEventListener('click', (e) => {
-      btn.childNodes[0].nodeValue = li.textContent;
-      closeDropdown();
-      onSelect(li.getAttribute('data-value'));
-    });
-  });
+  addEvents();
+  window.addEventListener('resize', addEvents);
+  window.addEventListener('scroll', () => {});
 }
 
 document.addEventListener('DOMContentLoaded', function() {

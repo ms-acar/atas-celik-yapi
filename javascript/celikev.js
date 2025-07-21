@@ -98,48 +98,64 @@ function setupCustomDropdown(onSelect) {
   const wrapper = document.getElementById('custom-dropdown-wrapper');
   const btn = document.getElementById('custom-dropdown-btn');
   const list = document.getElementById('custom-dropdown-list');
+
+  if (!wrapper || !btn || !list) return;
+
   btn.setAttribute('aria-expanded', 'false');
 
-  // Listeyi doldur
+  // Listeyi m² seçenekleriyle doldur
   list.innerHTML = '<li data-value="">Tüm m²</li>' + metrekareler.map(m2 =>
     `<li data-value="${m2}">${m2} m²</li>`
   ).join('');
 
-  // Açma/Kapama fonksiyonu
   function openDropdown() {
     list.classList.add('show');
     btn.setAttribute('aria-expanded', 'true');
   }
+
   function closeDropdown() {
     list.classList.remove('show');
     btn.setAttribute('aria-expanded', 'false');
   }
 
-  // Hem tıkla hem hover ile aç
-  btn.addEventListener('mouseenter', openDropdown);
-  btn.addEventListener('click', () => {
+  function toggleDropdown() {
     if (list.classList.contains('show')) {
       closeDropdown();
     } else {
       openDropdown();
     }
+  }
+
+  // Tıklama ile menüyü aç/kapat
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleDropdown();
   });
 
-  // Mouse leave ile hemen kapanmasın, kısa bir gecikme ile kapansın
-  let closeTimeout;
-  wrapper.addEventListener('mouseleave', () => {
-    closeTimeout = setTimeout(closeDropdown, 200);
-  });
+  // Sadece masaüstünde fareyle üzerine gelince aç
+  let leaveTimeout;
   wrapper.addEventListener('mouseenter', () => {
-    clearTimeout(closeTimeout);
+    if (window.innerWidth >= 768) {
+      clearTimeout(leaveTimeout);
+      openDropdown();
+    }
   });
 
-  // Scroll ile kapanmasın
-  window.addEventListener('scroll', () => {
-    // Kapatma işlemi yapılmıyor
+  // Sadece masaüstünde fareyle dışarı çıkınca kapat
+  wrapper.addEventListener('mouseleave', () => {
+    if (window.innerWidth >= 768) {
+      leaveTimeout = setTimeout(closeDropdown, 200);
+    }
   });
 
-  // Seçim işlemi
+  // Dışarıya tıklanınca menüyü kapat
+  document.addEventListener('click', (e) => {
+    if (!wrapper.contains(e.target)) {
+      closeDropdown();
+    }
+  });
+  
+  // Menüden bir öğe seçilince
   list.querySelectorAll('li').forEach(li => {
     li.addEventListener('click', (e) => {
       btn.childNodes[0].nodeValue = li.textContent;
