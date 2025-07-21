@@ -62,23 +62,36 @@ function renderCardsPaginated(filterType, filterM2, page = 1) {
     const card = document.createElement('div');
     card.className = 'bg-white rounded-xl border p-4 flex flex-col shadow hover:shadow-lg transition';
     card.innerHTML = `
-      <div class=\"relative\">
-        <span class=\"absolute top-2 left-2\" style=\"background:${blue};color:white;font-size:12px;font-weight:bold;padding:4px 12px;border-radius:6px;\">Prefabrik Ev</span>
-        <img src=\"${imgPath}\" alt=\"${ev.name}\" class=\"rounded-t-lg w-full h-56 object-cover mb-2\" onerror=\"this.src='images/cards/edirne15.jpg'\">
-      </div>
-      <div class=\"flex-1 flex flex-col justify-between\">
-        <h3 class=\"text-lg font-semibold mb-2\" style=\"color:${blue}\">${ev.name}</h3>
-        <div class=\"flex gap-2 mt-auto\">
-          <a href=\"#\" class=\"flex-1 text-center py-2 rounded fiyat-al-btn\" style=\"background:${orange};color:white;font-weight:600;\">Fiyat Al</a>
-          <a href="urun.html?ev=images/prefabrik/${ev.folder}/${ev.img}" class="flex-1 text-center py-2 rounded" style="background:${blue};color:white;font-weight:600;">İncele</a>
-        </div>
-      </div>
-    `;
+      <div class=\"relative\">\n
+      <span class=\"absolute top-2 left-2\" style=\"background:${blue};color:white;font-size:12px;font-weight:bold;padding:4px 12px;border-radius:6px;\">Prefabrik Ev</span>\n
+      <img src=\"${imgPath}\" alt=\"${ev.name}\" class=\"rounded-t-lg w-full h-56 object-cover mb-2\" onerror=\"this.src='images/cards/edirne15.jpg'\">\n
+      </div>\n
+      <div class=\"flex-1 flex flex-col justify-between\">\n
+      <h3 class=\"text-lg font-semibold mb-2\" style=\"color:${blue}\">${ev.name}</h3>\n
+      <div class=\"flex gap-2 mt-auto\">\n
+      <button type=\"button\" class=\"flex-1 text-center py-2 rounded fiyat-al-btn\" style=\"background:${orange};color:white;font-weight:600;\">Fiyat Al</button>\n
+      <a href=\"urun.html?ev=images/prefabrik/${ev.folder}/${ev.img}\" class=\"flex-1 text-center py-2 rounded\" style=\"background:${blue};color:white;font-weight:600;\">İncele</a>\n
+      </div>\n
+      </div>\n
+      `;
+      // <div class=\"relative\">\n
+      // <span class=\"absolute top-2 left-2\" style=\"background:${blue};color:white;font-size:12px;font-weight:bold;padding:4px 12px;border-radius:6px;\">Çelik Ev</span>\n
+      // <img src=\"${imgPath}\" alt=\"${ev.name}\" class=\"rounded-t-lg w-full h-56 object-cover mb-2\" onerror=\"this.src='images/cards/edirne15.jpg'\">\n
+      // </div>\n
+      // <div class=\"flex-1 flex flex-col justify-between\">\n
+      // <h3 class=\"text-lg font-semibold mb-2\" style=\"color:${blue}\">${ev.name}</h3>\n
+      // <div class=\"flex gap-2 mt-auto\">\n
+      // <button type=\"button\" class=\"flex-1 text-center py-2 rounded fiyat-al-btn\" style=\"background:${orange};color:white;font-weight:600;\">Fiyat Al</button>\n
+      // <a href=\"urun.html?ev=${encodeURIComponent(ev.name)}\" class=\"flex-1 text-center py-2 rounded\" style=\"background:${blue};color:white;font-weight:600;\">İncele</a>\n
+      // </div>\n
+      // </div>\n
+      // `;
     cardsContainer.appendChild(card);
   });
 
   document.getElementById('urun-sayac').textContent = filtered.length + ' ürün listelendi';
   renderPagination(totalPages, currentPage, filterType, filterM2);
+  if (window.attachModalEvents) window.attachModalEvents();
 }
 
     // Mobilde m2 dropdown tıklama ile açılıp kapanmalı, açıkken içine tıklanınca kapanmasın
@@ -122,80 +135,69 @@ function setupCustomDropdown(onSelect) {
   const wrapper = document.getElementById('custom-dropdown-wrapper');
   const btn = document.getElementById('custom-dropdown-btn');
   const list = document.getElementById('custom-dropdown-list');
+
+  if (!wrapper || !btn || !list) return;
+
   btn.setAttribute('aria-expanded', 'false');
 
-  // Listeyi doldur
+  // Listeyi m² seçenekleriyle doldur
   list.innerHTML = '<li data-value="">Tüm m²</li>' + metrekareler.map(m2 =>
     `<li data-value="${m2}">${m2} m²</li>`
   ).join('');
 
-  // Event temizleyici
-  function clearAllEvents() {
-    btn.replaceWith(btn.cloneNode(true));
-    list.replaceWith(list.cloneNode(true));
-  }
-
-  function addEvents() {
-    clearAllEvents();
-    const btnNew = document.getElementById('custom-dropdown-btn');
-    const listNew = document.getElementById('custom-dropdown-list');
-    // Masaüstü
-    if(window.innerWidth >= 768) {
-      btnNew.addEventListener('mouseenter', openDropdown);
-      btnNew.addEventListener('click', () => {
-        if (listNew.classList.contains('show')) {
-          closeDropdown();
-        } else {
-          openDropdown();
-        }
-      });
-      let closeTimeout;
-      wrapper.addEventListener('mouseleave', () => {
-        closeTimeout = setTimeout(closeDropdown, 200);
-      });
-      wrapper.addEventListener('mouseenter', () => {
-        clearTimeout(closeTimeout);
-      });
-    } else {
-      btnNew.addEventListener('click', function(e) {
-        e.stopPropagation();
-        if (listNew.classList.contains('show')) {
-          closeDropdown();
-        } else {
-          openDropdown();
-        }
-      });
-      listNew.addEventListener('click', function(e) {
-        e.stopPropagation();
-      });
-      document.addEventListener('click', function(e) {
-        if(!btnNew.contains(e.target) && !listNew.contains(e.target)) {
-          closeDropdown();
-        }
-      });
-    }
-    // Seçim işlemi
-    listNew.querySelectorAll('li').forEach(li => {
-      li.addEventListener('click', (e) => {
-        btnNew.childNodes[0].nodeValue = li.textContent;
-        closeDropdown();
-        onSelect(li.getAttribute('data-value'));
-      });
-    });
-  }
-
   function openDropdown() {
-    list.classList.add('show');
+    list.classList.remove('hidden');
     btn.setAttribute('aria-expanded', 'true');
   }
+
   function closeDropdown() {
-    list.classList.remove('show');
+    list.classList.add('hidden');
     btn.setAttribute('aria-expanded', 'false');
   }
 
-  addEvents();
-  window.addEventListener('resize', addEvents);
-  window.addEventListener('scroll', () => {});
+  function toggleDropdown() {
+    list.classList.toggle('hidden');
+    const isHidden = list.classList.contains('hidden');
+    btn.setAttribute('aria-expanded', !isHidden);
+  }
+
+  // Tıklama ile menüyü aç/kapat
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleDropdown();
+  });
+
+  // Sadece masaüstünde fareyle üzerine gelince aç
+  let leaveTimeout;
+  wrapper.addEventListener('mouseenter', () => {
+    if (window.innerWidth >= 768) {
+      clearTimeout(leaveTimeout);
+      openDropdown();
+    }
+  });
+
+  // Sadece masaüstünde fareyle dışarı çıkınca kapat
+  wrapper.addEventListener('mouseleave', () => {
+    if (window.innerWidth >= 768) {
+      leaveTimeout = setTimeout(closeDropdown, 200);
+    }
+  });
+
+  // Dışarıya tıklanınca menüyü kapat
+  document.addEventListener('click', (e) => {
+    if (!wrapper.contains(e.target)) {
+      closeDropdown();
+    }
+  });
+  
+  // Menüden bir öğe seçilince
+  list.querySelectorAll('li').forEach(li => {
+    li.addEventListener('click', (e) => {
+      btn.childNodes[0].nodeValue = li.textContent;
+      closeDropdown();
+      onSelect(li.getAttribute('data-value'));
+    });
+  });
 }
 
 document.addEventListener('DOMContentLoaded', function() {

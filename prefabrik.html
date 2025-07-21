@@ -271,6 +271,23 @@
       </div>
     </div>
   </footer>
+  <!-- Modal -->
+  <div id="modal-bg" style="display:none;position:fixed;z-index:50;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.6);align-items:center;justify-content:center;">
+    <div id="modal-content" style="background:white;border-radius:1rem;max-width:95vw;width:400px;padding:2rem;box-shadow:0 8px 32px rgba(0,0,0,0.2);position:relative;">
+      <button id="close-modal" style="position:absolute;top:1rem;right:1rem;font-size:1.5rem;color:#888;background:none;border:none;cursor:pointer;">&times;</button>
+      <h2 class="text-xl font-bold mb-4" style="color:#2563eb;">Fiyat Teklifi Al</h2>
+      <form id="modal-form" class="flex flex-col gap-4">
+        <input type="text" name="ad" placeholder="Adınız" required class="border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <input type="email" name="email" placeholder="E-posta" required class="border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <textarea name="mesaj" placeholder="Mesajınız" rows="3" required class="border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+        <button type="submit" class="bg-[#2563eb] text-white font-bold py-2 rounded hover:bg-blue-700 transition">Gönder</button>
+      </form>
+      <div class="mt-6 border-t pt-4 text-sm text-gray-700">
+        <div class="flex items-center gap-2 mb-2"><i class="fa-solid fa-phone text-blue-600"></i> <a href="tel:02822312424" class="hover:underline">0282 231 24 24</a></div>
+        <div class="flex items-center gap-2"><i class="fa-solid fa-envelope text-blue-600"></i> <a href="mailto:info@atascelikyapi.com" class="hover:underline">info@atascelikyapi.com</a></div>
+      </div>
+    </div>
+  </div>
   <button id="scrollToTopBtn" class="floating-btn scroll-to-top-btn" style="display:none;position:fixed;bottom:20px;right:20px;z-index:999;">
     <i class="fa-solid fa-arrow-up"></i>
   </button>

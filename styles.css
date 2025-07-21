@@ -1054,10 +1054,6 @@
   }
 }
 
-.show {
-  display: block !important;
-}
-
 @media (max-width: 600px) {
   #nav-dots {
     z-index: 9999 !important;
@@ -1069,4 +1065,27 @@
   .floating-btn {
     z-index: 9999 !important;
   }
+}
+
+.shine-effect::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 20%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.4);
+    transform: rotate(45deg);
+    transition: all 0.5s ease-out;
+    opacity: 0;
+    pointer-events: none;
+}
+.shine-effect:hover::after {
+    left: 120%;
+    opacity: 1;
+}
+
+/* Dropdown'ın görünürlüğünü kontrol etmek için .show class'ı */
+.show {
+  display: block !important;
 }
