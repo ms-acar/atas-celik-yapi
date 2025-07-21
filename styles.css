@@ -1057,3 +1057,16 @@
 .show {
   display: block !important;
 }
+
+@media (max-width: 600px) {
+  #nav-dots {
+    z-index: 9999 !important;
+    position: fixed !important;
+    top: 60%; /* daha aşağıda dursun */
+    right: 8px;
+    transform: translateY(-50%);
+  }
+  .floating-btn {
+    z-index: 9999 !important;
+  }
+}
