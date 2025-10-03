@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://www.atascelikyapi.com.tr/sitemap.xml
